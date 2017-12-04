@@ -1,0 +1,178 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Verdana','Arial', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+header {
+  height: 100px;
+  border-bottom: 4px solid #c7c7c7;
+}
+.header-inner {
+  position: relative;
+	height: 100%;
+}
+.logo {
+  position: absolute;
+  top:0;
+  left: -175px;
+  margin-top: 27px;
+  background: transparent;
+}
+.header-inner, main{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+nav {
+  display: flex;
+	flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+	height: 100%;
+}
+.resource {
+	margin-left: 50px;
+	margin-bottom: 12px;
+	font-size: 24px;
+	color: #393939;
+}
+
+.selected {
+	color: #49c757;
+	text-decoration: underline;
+}
+.resource:hover {
+	color: #49c757;
+	cursor: pointer;
+}
+
+.current-resource {
+	margin: 34px 0 0;
+	font-weight: normal;
+}
+
+.news-item {
+	min-height: 134px;
+	border: 1px solid #c7c7c7;
+}
+.item {
+	display: flex;
+	align-items: flex-start;
+	margin: 34px 0;
+	border: 1px solid #c7c7c7;
+}
+.item:hover {
+	-webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+	-webkit-transform: translateY(-1px);
+		transform: translateY(-1px);
+}
+
+.item:hover a{
+	color: #49c757;
+}
+
+.item-img {
+	flex-shrink: 0;
+	margin: 5px;
+  width: 214px;
+  height: 134px;
+  background-color: #f1f1f1;
+  overflow: hidden;
+ 	text-align: center;
+}
+.item-img img {
+	height: 134px;
+	width: auto;
+}
+
+.item-info{
+	padding: 20px;
+}
+.item-info h3{
+	font-size: 18px;
+}
+.item-info span {
+	font-size: 11px;
+}
+.item-info p {
+	font-size: 14px;
+	margin-top: 14px;
+}
+
+
+@media screen and (max-width: 1349px) and (min-width: 736px) {
+	body {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	header{
+		height: 60px;
+	}
+	.logo {
+		margin-top: 5px;
+		left: 0;
+	}
+	.logo img {
+		width: 50px;
+		height: 50px;
+	}
+	.current-resource{
+		margin: 14px 0 0 0;
+	}
+	.item{
+			margin: 14px 0 0 0;
+	}
+	.item-info {
+			padding: 5px 5px 5px 10px;
+	}
+}
+
+@media screen and (max-width: 735px) {
+	body {
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+	header {
+		height: 60px;
+	}
+	.logo {
+		margin-top: 6px;
+		left: 0;
+	}
+	.logo img {
+		width: 50px;
+		height: 50px;
+	}
+	.resource {
+    margin-left: 16px;
+    font-size: 16px;
+}
+	.current-resource {
+		margin: 14px 0 0 0;
+		font-size: 14px;
+	}
+	.item {
+		margin: 20px 0;
+	}
+	.item-img {
+		margin: 5px 0 5px 5px;
+		width: 134px;
+	}
+	.item-info {
+	    padding: 5px 5px 5px 10px;
+	}
+	.item-info h3 {
+		font-size: 14px;
+	}
+	.item-info span {
+		font-size: 12px;
+	}
+	.item-info p {
+		font-size: 12px;
+	}
+}
