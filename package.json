@@ -1,0 +1,29 @@
+{
+  "name": "NewsViewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel --plugins transform-es2015-modules-commonjs src -d js",
+    "watch": "babel -w src -d js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaPoddubko/NewsViewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlgaPoddubko/NewsViewer/issues"
+  },
+  "homepage": "https://github.com/OlgaPoddubko/NewsViewer#readme"
+}

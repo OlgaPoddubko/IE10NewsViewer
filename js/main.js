@@ -1,4 +1,11 @@
-document.querySelectorAll('.resource').forEach( (i) => i.addEventListener("click", changeNews) );
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
+let resourceButtons = document.querySelectorAll('.resource');
+for (let i = 0; i < resourceButtons.length; i++) {
+	resourceButtons[i].addEventListener("click", changeNews);
+}
+
 const apiKey = 'b33018277b5a4dc298a613609d54a1ea';
 
 function getData(resourceID = 'bbc-news') {
@@ -55,7 +62,10 @@ function convertDate(str) {
 }
 
 function renderNews(resp) {
-	resp.articles.forEach( i => renderItem (i));
+	for (	let i = 0; i < resp.articles.length; i++ ) {
+		renderItem (resp.articles[i]);
+	}
+
 };
 
 function renderItem (itemData) {

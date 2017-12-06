@@ -1,8 +1,13 @@
 'use strict';
 
-document.querySelectorAll('.resource').forEach(function (i) {
-    return i.addEventListener("click", changeNews);
-});
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
+var resourceButtons = document.querySelectorAll('.resource');
+for (var i = 0; i < resourceButtons.length; i++) {
+    resourceButtons[i].addEventListener("click", changeNews);
+}
+
 var apiKey = 'b33018277b5a4dc298a613609d54a1ea';
 
 function getData() {
@@ -57,9 +62,9 @@ function convertDate(str) {
 }
 
 function renderNews(resp) {
-    resp.articles.forEach(function (i) {
-        return renderItem(i);
-    });
+    for (var _i = 0; _i < resp.articles.length; _i++) {
+        renderItem(resp.articles[_i]);
+    }
 };
 
 function renderItem(itemData) {
